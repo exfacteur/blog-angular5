@@ -1,14 +1,14 @@
 <article class="offset-lg-2 col-lg-8">
   <header>
-    <h3>My title</h3>
+    <h3>{{post?.title}}</h3>
   </header>
   <section>
   <div>
-    content
+    {{post?.content}}
   </div>
   </section>
   <section>
-    <a  href="#">Octo</a>
-    <time class="post-date date">02/02/018</time>
+    <a  href="#">{{post?.author}}</a>
+    <time class="post-date date">{{post?.date | date:'medium'}}</time>
   </section>
 </article>
