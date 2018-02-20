@@ -5,6 +5,7 @@ import { ContentComponent } from './content/content.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PostEditorComponent } from './post-editor/post-editor.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  declarations: [DashboardComponent, ContentComponent]
+  declarations: [DashboardComponent, ContentComponent, PostEditorComponent]
 })
 export class DashboardModule { }
