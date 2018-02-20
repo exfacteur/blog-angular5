@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+.row-full-height {
+  background-color: green;
+  flex:2;
+  display: flex;
+}
+#content-post {
+  position: relative;
+
+}
+#content-post .card {
+  padding : 20px 15px;
+}
+#content-edit {
+  position: absolute;
+  right: 25px;
+  top : 15px;
+}

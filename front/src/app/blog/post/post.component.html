@@ -1,14 +1,14 @@
-<article class="offset-lg-2 col-lg-8 row">
+<article class="offset-lg-2 col-lg-8 row" *ngFor="let post of posts">
   <header class="col-lg-12">
-    <a href="#"><h3>title</h3></a>
+    <a [routerLink]=[post?.id]><h3>{{post?.title}}</h3></a>
   </header>
   <section class="section-post-content">
-      My content
+      {{post?.content}}
     <a class="post-link-arrow"> <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
   </section>
   <section class="col-lg-12">
-    <span href="#">Octo</span>
-    <time class="post-date date">01/02/2018</time>
+    <span href="#">{{post?.author}}</span>
+    <time class="post-date date">{{post?.date| date:'medium'}}</time>
   </section>
   <hr class="post-divider col-lg-12">
 </article>
