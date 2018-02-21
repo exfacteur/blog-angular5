@@ -45,18 +45,14 @@ var postsApi = {
   },
   editPost: (req, res) => {
     var id = req.params.id;
-    if (posts.indexOf(id) === -1) {
-      res.status(404);
-      res.send();
+    if (req.body.title) {
+      posts[id -1].title = req.body.title;
     }
     if (req.body.content) {
-      posts[id].content = req.body.content;
-    }
-    if (req.body.title) {
-      posts[id].title = req.body.title;
+        posts[id -1].content = req.body.content;
     }
     res.status(200);
-    return res.send();
+    return res.json({data : posts[id-1]})
   },
   deletePost: (req, res) => {
     res.status(200);

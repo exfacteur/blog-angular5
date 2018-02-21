@@ -19,4 +19,12 @@ export class PostService {
   getById(id): Observable<any> {
     return this.http.get(`${this.baseUrl}/posts/${id}`);
   }
+
+  public add(data)  : Observable<any> {
+    return this.http.post(`${this.baseUrl}/posts`, data);
+  }
+
+  put(data):Observable <any> {
+    return this.http.put(`${this.baseUrl}/posts/${data.id}`, data);
+  }
  }
